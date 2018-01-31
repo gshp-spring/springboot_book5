@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <title>test</title>
+</head>
+<body>
+<div>
+    <p th:if="${param.logout}" class="alert">로그아웃</p>
+    <p th:if="${param.error}" class="alert">오류발생. 다시 시도하세요.</p>
+
+    <form name="form" th:action="@{/login}" action="/login" method="post">
+        <input type="text" name="username" value="" placeholder="username"/>
+        <input type="password" name="password" value="" placeholder="password"/>
+        <input type="submit" id="login" name="login" value="Login"/>
+    </form>
+</div>
+</body>
+</html>
